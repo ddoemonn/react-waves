@@ -2,9 +2,7 @@
 
 The Waves component is a customizable, animated wave generator built with React. It allows you to create beautiful, overlapping wave animations with ease, perfect for adding dynamic backgrounds or decorative elements to your web applications.
 
-
 https://github.com/user-attachments/assets/7f5f3f6e-70c4-4949-88d1-ea0ee9cdf05e
-
 
 
 ## Features
@@ -131,7 +129,7 @@ Here's a basic example of how to use the Waves component:
 
 ```jsx
 import React from 'react';
-import { OverlappingWaves } from '@yourpackage/waves-component';
+import  Waves  from '@/components/Waves';
 
 const WavesExample = () => {
   const waves = [
@@ -142,7 +140,7 @@ const WavesExample = () => {
   ];
 
   return (
-    <OverlappingWaves
+    <Waves
       height={400}
       width={600}
       waves={waves}
@@ -157,7 +155,7 @@ export default WavesExample;
 
 ### Props
 
-The `OverlappingWaves` component accepts the following props:
+The `Waves` component accepts the following props:
 
 - `height` (number): The height of the canvas in pixels.
 - `width` (number): The width of the canvas in pixels.
@@ -171,11 +169,11 @@ The `OverlappingWaves` component accepts the following props:
 
 ### Advanced Usage
 
-You can create more complex wave compositions by using multiple `OverlappingWaves` components:
+You can create more complex wave compositions by using multiple `Waves` components:
 
 ```jsx
 import React from 'react';
-import { OverlappingWaves } from '@yourpackage/waves-component';
+import Waves from '@components/Waves';
 
 const AdvancedWavesExample = () => {
   const wavesSets = [
@@ -204,7 +202,7 @@ const AdvancedWavesExample = () => {
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       {wavesSets.map((waves, index) => (
         <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden">
-          <OverlappingWaves
+          <Waves
             height={400}
             width={400}
             waves={waves}
